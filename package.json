@@ -1,0 +1,23 @@
+{
+  "name": "lemmings-js",
+  "version": "1.0.0",
+  "description": "Lemmings (JavaScript)",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "start": "http-server --cors=*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oklemenz/LemmingsJS.git"
+  },
+  "bugs": {
+    "url": "https://github.com/oklemenz/LemmingsJS/issues"
+  },
+  "homepage": "https://github.com/oklemenz/LemmingsJS#readme",
+  "devDependencies": {
+    "http-server": "^13.0.2"
+  }
+}

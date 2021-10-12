@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Lemmings - Lemmings / Oh no! More Lemmings</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0.0, viewport-fit=cover"/>
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="PrinceJS" />
+  <link rel="icon" type="image/png" href="img/favicon.png" />
+  <link rel="shortcut icon" type="image/png" href="img/touch-icon-152.png" />
+  <link rel="apple-touch-icon" href="img/touch-icon-152.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="img/touch-icon-152.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="img/touch-icon-180.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <link type="text/css" rel="stylesheet" href="css/game.css">
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/lemmings.js"></script>
+  <script type="text/javascript">
+    var lemmings;
+    function init() {
+      lemmings = new Lemmings.GameView();
+      lemmings.elementLevelName = document.getElementById("levelName");
+      lemmings.gameCanvas = document.getElementById("gameCanvas");
+      lemmings.setup();
+    }
+
+    function setSize() {
+      var ratio = 800 / 480;
+      var gameContainer = jQuery(".game_container");
+      var width = window.innerWidth;
+      var height = window.innerHeight;
+      if (width >= height * ratio) {
+        gameContainer.width(height * ratio);
+        gameContainer.height(height);
+        gameContainer.css("margin-top", "");
+        gameContainer.css("margin-left", (width - height * ratio) / 2);
+      } else {
+        gameContainer.width(width);
+        gameContainer.height(width / ratio);
+        gameContainer.css("margin-top", (height - width / ratio) / 2);
+        gameContainer.css("margin-left", "");
+      }
+    }
+
+    jQuery(document).ready(function () {
+      setSize();
+    });
+    $(window).on("resize orientationchange", function() {
+      setSize();
+    });
+  </script>
+</head>
+<body onload="init();" oncontextmenu="return false;">
+  <div class="game_container">
+    <canvas height="480" width="800" id="gameCanvas"></canvas>
+    <span id="levelName" class="level_name"></span>
+    <img class="arrow_l" src="img/arrow_l.png" onclick="lemmings.moveToLevel(-1)"/>
+    <img class="arrow_r" src="img/arrow_r.png" onclick="lemmings.moveToLevel(1)"/>
+  </div>
+</body>
+</html>
+
+
+
+

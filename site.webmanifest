@@ -1,0 +1,12 @@
+{
+    "name": "Lemmings - Lemmings / Oh no! More Lemmings",
+    "short_name": "Lemmings",
+    "description": "An HTML5 port of Lemmings",
+    "icons": [{
+        "src": "img/touch-icon-192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+    }],
+    "display": "fullscreen",
+    "orientation": "landscape"
+}
