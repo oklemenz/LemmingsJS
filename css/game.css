@@ -26,12 +26,6 @@ canvas {
     object-fit: contain;
 }
 
-.game {
-    margin: auto;
-    width: 100vw;
-    height: 100vh;
-}
-
 .game_container {
     display: block;
     touch-action: none;
@@ -46,6 +40,11 @@ canvas {
     font-size: 16px;
 }
 
+.game_container.small > .level_name {
+    font-size: 12px;
+    bottom: 18px;
+}
+
 .arrow_l {
     display: inline-block;
     position: relative;
@@ -54,10 +53,18 @@ canvas {
     float: right;
 }
 
+.game_container.small > .arrow_l {
+    zoom: 0.6
+}
+
 .arrow_r {
     display: inline-block;
     position: relative;
     bottom: 95px;
     left: 25px;
     float: right;
+}
+
+.game_container.small > .arrow_r {
+    zoom: 0.6
 }

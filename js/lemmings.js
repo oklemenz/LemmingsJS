@@ -8664,6 +8664,9 @@ var Lemmings;
         /// handel click on the skills panel
         handleSkillMouseDown(x) {
             let panelIndex = Math.trunc(x / 16);
+            if (panelIndex != 11) {
+                this.game.nukePrepared = false;
+            }
             if (panelIndex == 0) {
                 this.deltaReleaseRate = -3;
                 this.doReleaseRateChanges();
@@ -8679,11 +8682,17 @@ var Lemmings;
                 return;
             }
             if (panelIndex == 11) {
-                this.game.queueCmmand(new Lemmings.CommandNuke());
+                if (this.game.nukePrepared) {
+                    this.game.queueCmmand(new Lemmings.CommandNuke());
+                } else {
+                    this.game.nukePrepared = true;
+                }
                 return;
             }
             if (panelIndex == 12) {
-                this.game.getGameTimer().speedFactor = 5;
+                if (this.gameTimer.speedFactor < 10) {
+                    this.gameTimer.speedFactor += 2;
+                }
                 return;
             }
             let newSkill = this.getSkillByPanelIndex(panelIndex);

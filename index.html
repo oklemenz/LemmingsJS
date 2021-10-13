@@ -36,11 +36,13 @@
         gameContainer.height(height);
         gameContainer.css("margin-top", "");
         gameContainer.css("margin-left", (width - height * ratio) / 2);
+        gameContainer.removeClass("small");
       } else {
         gameContainer.width(width);
         gameContainer.height(width / ratio);
         gameContainer.css("margin-top", (height - width / ratio) / 2);
         gameContainer.css("margin-left", "");
+        gameContainer.addClass("small");
       }
     }
 
