@@ -7,6 +7,13 @@ body {
     background-color: black;
 }
 
+@media (orientation: portrait) {
+    html,
+    body {
+        overflow: hidden;
+    }
+}
+
 body,
 body * {
     -webkit-touch-callout: none;
@@ -37,12 +44,12 @@ canvas {
     color: white;
     bottom: 22px;
     left: 2px;
-    font-size: 16px;
+    font-size: 15px;
 }
 
 .game_container.small > .level_name {
-    font-size: 12px;
-    bottom: 18px;
+    font-size: 11px;
+    bottom: 17px;
 }
 
 .arrow_l {
