@@ -4,19 +4,19 @@ Lemmings reimplementation written in HTML5 / JavaScript
 
 ## Play Online
 
-- Browser: https://lemmings.oklemenz.de
+- Browser: https://lemmingsjs.oklemenz.de
 - Keyboard / Mouse Controls
 
 ## Play Mobile
 
-- Browser: https://lemmings.oklemenz.de
+- Browser: https://lemmingsjs.oklemenz.de
   - Use Landscape Mode (Single Tab, Disable Landscape Tab Bar in Browser Settings)
 - Add to Home Screen to start as Fullscreen App
 - Touch Controls (tap/drag area on screen):
 
 ## Play GitHub Version
 
-- Browser: https://oklemenz.github.io/LemmingsJS
+- Browser: https://oklemenz.github.io/
 
 ## Play Locally
 
@@ -41,8 +41,8 @@ Url parameters are leveraged to save game state automatically (shortcut in brack
 
 ## Versions
 
-- Lemmings: https://lemmings.oklemenz.de?version=0
-- Oh no! More Lemmings: https://lemmings.oklemenz.de?version=1
+- Lemmings: https://lemmingsjs.oklemenz.de?version=0
+- Oh no! More Lemmings: https://lemmingsjs.oklemenz.de?version=1
 
 ## Credits
 
