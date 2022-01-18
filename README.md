@@ -16,7 +16,7 @@ Lemmings reimplementation written in HTML5 / JavaScript
 
 ## Play GitHub Version
 
-- Browser: https://oklemenz.github.io/
+- Browser: https://oklemenz.github.io/LemmingsJS
 
 ## Play Locally
 
