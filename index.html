@@ -55,11 +55,13 @@
   </script>
 </head>
 <body onload="init();" oncontextmenu="return false;">
-  <div class="game_container">
-    <canvas height="480" width="800" id="gameCanvas"></canvas>
-    <span id="levelName" class="level_name"></span>
-    <img class="arrow_l" src="img/arrow_l.png" onclick="lemmings.moveToLevel(-1)"/>
-    <img class="arrow_r" src="img/arrow_r.png" onclick="lemmings.moveToLevel(1)"/>
+  <div class="game">
+    <div class="game_container">
+      <canvas height="480" width="800" id="gameCanvas"></canvas>
+      <span id="levelName" class="level_name"></span>
+      <img class="arrow_l" src="img/arrow_l.png" onclick="lemmings.moveToLevel(-1)"/>
+      <img class="arrow_r" src="img/arrow_r.png" onclick="lemmings.moveToLevel(1)"/>
+    </div>
   </div>
 </body>
 </html>
