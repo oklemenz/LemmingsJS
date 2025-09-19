@@ -35,7 +35,7 @@ body * {
     .game,
     .game_container {
         width: 100vw;
-        height: calc(100vh - env(safe-area-inset-bottom, 0px));
+        height: 100vh;
     }
 }
 
